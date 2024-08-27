@@ -1,4 +1,4 @@
-
+<p-card class="border border-border">
     <section class="listing">
       <img
         class="listing-photo"
@@ -7,4 +7,7 @@
         crossorigin/>
       <h2 class="listing-heading">{{ housingLocation.name }}</h2>
       <p class="listing-location">{{ housingLocation.city }}, {{ housingLocation.state }}</p>
+      <a [routerLink]="['/details/:housinglocationID']">View Details of {{ housingLocation.name }}</a>
+
     </section>
+  </p-card>

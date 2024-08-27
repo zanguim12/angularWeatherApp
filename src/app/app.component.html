@@ -1,19 +1,12 @@
 <div class="min-h-screen flex flex-col items-center justify-center bg-background">
-  <header class="mb-8">
-    <!-- Logo avec PrimeNG et Tailwind -->
-    <p-image src="logo.jpeg" alt="logo" class="block w-32 h-32 sm:w-40 sm:h-40"></p-image>
-  </header>
 
-  <section class="content w-full max-w-4xl p-4">
-    <!-- Encapsulation de la page d'accueil avec PrimeNG -->
-    <p-card class="w-full shadow-lg">
-      <ng-template pTemplate="header">
-        <h2 class="text-xl font-semibold text-center">Welcome to Our Application</h2>
-      </ng-template>
+  <a [routerLink]="['/']">
+    <header class="brand-name">
+      <img class="brand-logo" src="logo.jpeg" alt="logo" aria-hidden="true" />
+    </header>
+  </a>
 
-      <ng-template pTemplate="content">
-        <app-home-page></app-home-page>
-      </ng-template>
-    </p-card>
+  <section class="content">
+    <router-outlet></router-outlet>
   </section>
 </div>
