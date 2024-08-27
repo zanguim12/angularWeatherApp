@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HousinglocationComponent } from '../housinglocation/housinglocation.component';
 import { HousingService } from '../housing.service';
 import { CardModule } from 'primeng/card';
+import { DetailsComponent } from '../details/details.component';
 
 @Component({
   selector: 'app-home-page',
@@ -12,6 +13,7 @@ import { CardModule } from 'primeng/card';
     CommonModule,
     HousinglocationComponent,
     CardModule,
+    DetailsComponent
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'

@@ -7,7 +7,6 @@
         crossorigin/>
       <h2 class="listing-heading">{{ housingLocation.name }}</h2>
       <p class="listing-location">{{ housingLocation.city }}, {{ housingLocation.state }}</p>
-      <a [routerLink]="['/details/:housinglocationID']">View Details of {{ housingLocation.name }}</a>
-
+      <a [routerLink]="['/details', housingLocation.id]">View Details of {{ housingLocation.name }}</a>
     </section>
   </p-card>

@@ -4,7 +4,6 @@ import {Component, Input} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { DetailsComponent } from '../details/details.component';
-
 @Component({
   selector: 'app-housinglocation',
   standalone: true,
