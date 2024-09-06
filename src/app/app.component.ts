@@ -1,3 +1,5 @@
+import { HttpClientModule } from '@angular/common/http';
+import { WeatherComponent } from './weather/weather.component';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
@@ -10,7 +12,7 @@ import { DetailsComponent } from './details/details.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HomePageComponent,ImageModule,CardModule,RouterModule,DetailsComponent],
+  imports: [CommonModule, RouterOutlet, HomePageComponent,ImageModule,CardModule,RouterModule,DetailsComponent, WeatherComponent, HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

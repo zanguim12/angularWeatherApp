@@ -5,12 +5,14 @@ import {ActivatedRoute} from '@angular/router';
 import {HousingService} from '../housing.service';
 import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 
+
 @Component({
   selector: 'app-details',
   standalone: true,
   imports: [
     CommonModule,
     ReactiveFormsModule,
+
   ],
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss'
