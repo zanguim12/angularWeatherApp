@@ -1,13 +1,16 @@
-<p-card class="border border-border">
-    <section class="listing">
+<p-card class="px-8 py-12 max-w-md mx-auto">
+    <section class="listing ">
       <img
-        class="listing-photo"
+        class="listing-photo mt-6 rounded-lg shadow-xl"
         [src]="housingLocation.photo"
-        alt="Exterior photo of {{ housingLocation.name }}"
-        crossorigin/>
-      <h2 class="listing-heading">{{ housingLocation.name }}</h2>
-      <p class="listing-location">{{ housingLocation.city }}, {{ housingLocation.state }}</p>
-      <a [routerLink]="['/details', housingLocation.id]">View Details of {{ housingLocation.name }}</a>
+        alt="Exterior photo of {{ housingLocation.name }} workationing" crossorigin/>
+      <h2 class="listing-heading mt-8 text-2xl font-semibold text-gray-900 leading-loose">
+        {{ housingLocation.name }}
+      </h2>
+      <p class="listing-location mt-1">
+        {{ housingLocation.city }}, {{ housingLocation.state }}</p>
+      <a class="mt-2 inline-block px-5 py-3 shadow-lg rounded-lg bg-indigo-500 text-white uppercase tracking text-sm" [routerLink]="['/details', housingLocation.id]">
+        View Details of {{ housingLocation.name }}</a>
     </section>
   </p-card>
   <!-- <div class="bg-card text-card-foreground rounded-lg overflow-hidden shadow-lg">

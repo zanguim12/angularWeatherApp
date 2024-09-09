@@ -1,11 +1,11 @@
 
-    <article>
+    <article class="bg-gray-30">
+      <div class="px-10 py-5">
       <img
         class="listing-photo"
         [src]="housingLocation?.photo"
         alt="Exterior photo of {{ housingLocation?.name }}"
-        crossorigin
-      />
+        crossorigin/>
       <section class="listing-description">
         <h2 class="listing-heading">{{ housingLocation?.name }}</h2>
         <p class="listing-location">{{ housingLocation?.city }}, {{ housingLocation?.state }}</p>
@@ -30,4 +30,5 @@
           <button type="submit" class="primary">Apply now</button>
         </form>
       </section>
+    </div>
     </article>
