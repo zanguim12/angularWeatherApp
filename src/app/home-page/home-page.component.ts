@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Housinglocation } from '../housinglocation';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgClass } from '@angular/common';
 import { HousinglocationComponent } from '../housinglocation/housinglocation.component';
 import { HousingService } from '../housing.service';
 import { CardModule } from 'primeng/card';
@@ -17,7 +17,8 @@ import { RouterModule } from '@angular/router';
     CardModule,
     DetailsComponent,
     RouterModule,
-    WeatherComponent
+    WeatherComponent,
+    NgClass
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'

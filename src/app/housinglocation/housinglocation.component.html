@@ -1,18 +1,25 @@
-<p-card class="px-8 py-12 max-w-md mx-auto">
-    <section class="listing ">
-      <img
-        class="listing-photo mt-6 rounded-lg shadow-xl"
-        [src]="housingLocation.photo"
-        alt="Exterior photo of {{ housingLocation.name }} workationing" crossorigin/>
-      <h2 class="listing-heading mt-8 text-2xl font-semibold text-gray-900 leading-loose">
-        {{ housingLocation.name }}
-      </h2>
-      <p class="listing-location mt-1">
-        {{ housingLocation.city }}, {{ housingLocation.state }}</p>
-      <a class="mt-2 inline-block px-5 py-3 shadow-lg rounded-lg bg-indigo-500 text-white uppercase tracking text-sm" [routerLink]="['/details', housingLocation.id]">
-        View Details of {{ housingLocation.name }}</a>
-    </section>
-  </p-card>
+<p-card class="px-8 py-12 max-w-md bg-card text-card-foreground rounded-lg overflow-hidden w-full h-80">
+  <section class="listing">
+    <img
+      class="listing-photo mt-6 rounded-lg  object-cover w-full h-40"
+      [src]="housingLocation.photo"
+      alt="Exterior photo of {{ housingLocation.name }} workationing" crossorigin />
+
+    <h2 class="listing-heading mt-4 text-2xl font-semibold text-gray-900 leading-loose">
+      {{ housingLocation.name }}
+    </h2>
+
+    <p class="listing-location mt-1 text-gray-700">
+      {{ housingLocation.city }}, {{ housingLocation.state }}
+    </p>
+
+    <a class="mt-4 inline-block px-5 py-3 rounded-lg bg-indigo-500 text-white uppercase tracking text-sm"
+       [routerLink]="['/details', housingLocation.id]">
+      View Details of {{ housingLocation.name }}
+    </a>
+  </section>
+</p-card>
+
   <!-- <div class="bg-card text-card-foreground rounded-lg overflow-hidden shadow-lg">
     <img src="https://openui.fly.dev/openui/300x200.svg?text=Image+1" alt="Image 1" class="w-full h-48 object-cover" />
     <div class="p-4">

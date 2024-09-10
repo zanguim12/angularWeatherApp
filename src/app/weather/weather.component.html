@@ -1,14 +1,29 @@
-<div class="weather-container">
-  <input [(ngModel)]="city" placeholder="Entrer une ville" />
-  <button (click)="getWeather()">Rechercher</button>
+<div class="weather-container h-screen bg-cover ">
+  <div class="flex items-center justify-center w-full h-full">
+    <div class="bg-white bg-opacity-75 p-6 rounded-lg  max-w-md w-full mx-4">
+      <div class="mb-4">
+        <input
+          [(ngModel)]="city"
+          placeholder="Entrer une ville"
+          class="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500"/>
+        <button
+          (click)="getWeather()"
+          class="mt-2 w-full px-4 py-2 bg-primary text-black rounded-lg shadow-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary-500">
+          Rechercher
+        </button>
+      </div>
 
-  <h1>Météo pour {{ city }}</h1>
-  <div *ngIf="weatherData">
-    <p>Température : {{ weatherData.main.temp }}°C</p>
-    <p>Humidité : {{ weatherData.main.humidity }}%</p>
-    <p>Conditions : {{ weatherData.weather[0].description }}</p>
-  </div>
-  <div *ngIf="!weatherData">
-    <p>Chargement des données...</p>
+      <h1 class="text-2xl font-bold mb-4">Météo pour {{ city }}</h1>
+
+      <div *ngIf="weatherData" class="bg-white p-4 rounded-lg shadow-sm">
+        <p class="text-lg font-semibold">Température : {{ weatherData.main.temp }}°C</p>
+        <p class="text-sm">Humidité : {{ weatherData.main.humidity }}%</p>
+        <p class="text-sm">Conditions : {{ weatherData.weather[0].description }}</p>
+      </div>
+
+      <div *ngIf="!weatherData" class="mt-4 text-gray-500">
+        <p>Chargement des données...</p>
+      </div>
+    </div>
   </div>
 </div>
