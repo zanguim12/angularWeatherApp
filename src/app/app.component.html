@@ -1,13 +1,16 @@
 <div class="bg-cyan-900">
-  <a [routerLink]="['/']">
-    <header class="brand-name bg-gray-800">
-      <div class="items-center p-4 ">
-        <img class="brand-logo h-10 items-center" src="logo.jpeg" alt="logo workcation" aria-hidden="true" />
-      </div>
-    </header>
-  </a>
+  <header class="brand-name bg-gray-800 flex justify-between items-center p-4">
+    <!-- Logo à gauche -->
+    <a [routerLink]="['/']" class="flex items-center">
+      <img class="brand-logo h-10" src="logo.jpeg" alt="logo workcation" aria-hidden="true" />
+    </a>
+    <a [routerLink]="['/weather']" class="text-white-400 hover:underline hover:bg-blue-400 px-4 py-2 rounded-lg">
+      Weather App
+    </a>
+  </header>
 </div>
-<div class="justify-center min-h-screen flex flex-col items-center bg-black-100">
+
+<div class="justify-center min-h-screen  items-center bg-gray-100">
   <section class="content">
     <router-outlet></router-outlet>
   </section>

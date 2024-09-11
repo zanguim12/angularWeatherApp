@@ -1,4 +1,4 @@
-<p-card class="px-8 py-12 max-w-md bg-card text-card-foreground rounded-lg overflow-hidden w-full h-80">
+<p-card class="px-8 py-12 max-w-md bg-card text-card-foreground rounded-lg overflow-hidden w-full h-80 ">
   <section class="listing">
     <img
       class="listing-photo mt-6 rounded-lg  object-cover w-full h-40"
@@ -13,7 +13,7 @@
       {{ housingLocation.city }}, {{ housingLocation.state }}
     </p>
 
-    <a class="mt-4 inline-block px-5 py-3 rounded-lg bg-indigo-500 text-white uppercase tracking text-sm"
+    <a class="mt-4 inline-block px-5 py-3 rounded-lg bg-indigo-400 text-white uppercase tracking text-sm"
        [routerLink]="['/details', housingLocation.id]">
       View Details of {{ housingLocation.name }}
     </a>

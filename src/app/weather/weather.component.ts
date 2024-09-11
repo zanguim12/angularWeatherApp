@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './weather.component.scss'
 })
 export class WeatherComponent implements OnInit {
-  city: string = 'Paris';  // Ville par défaut
+  city: string = 'Dschang';  // Ville par défaut
   weatherData: any;
 
   constructor(private weatherService: WeatherService) {}
